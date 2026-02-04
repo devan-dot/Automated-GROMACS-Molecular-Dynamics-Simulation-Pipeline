@@ -9,11 +9,11 @@ POSRES_SCHEDULE = [(400, 40), (300, 30), (200, 20), (100, 10), (50, 5)]
 
 
 BANNER = r"""
-  ____                                      ____                
- / ___|_ __ ___  _ __ ___   __ _           |  _ \ _   _ _ __  
-| |  _| '__/ _ \| '_ ` _ \ / _` |  _____   | |_) | | | | '_ \ 
-| |_| | | | (_) | | | | | | (_| | |_____|  |  _ <| |_| | | | |
- \____|_|  \___/|_| |_| |_|\__,_|          |_| \_\\__,_|_| |_|
+  ____                                         ____                
+ / ___|_ __ ___  _ __ ___   __ _  ___         |  _ \ _   _ _ ___  
+| |  _| '__/ _ \| '_ ` _ \ / _` |/  /  ____   | |_) | | | | '_  \ 
+| |_| | | | (_) | | | | | | (_| || |  |____|  |  _ <| |_| | | | |
+ \____|_|  \___/|_| |_| |_|\__,_|\__\         |_| \_\\__,_|_| |_|
                                                          
           >> Automated GROMACS CHARMM-GUI Pipeline <<
 """
@@ -177,7 +177,7 @@ def run_production(mdp, input_gro):
 # ---------------- MAIN WORKFLOW ---------------- #
 
 def main():
-    # Print the ASCII banner
+    
     print(BANNER)
 
     min_mdp = input("Minimization MDP filename: ").strip()
@@ -278,7 +278,6 @@ def main():
     run_production(prod_mdp, final_gro)
 
     print("\nALL SIMULATIONS COMPLETED SUCCESSFULLY.")
-    print(" For more information, visit https://github.com/devan-dot")
 
 
 if __name__ == "__main__":
